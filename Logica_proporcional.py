@@ -1,5 +1,5 @@
 # un sistema de seguridad en una boveda
-from sympy import symbols, Or, And, Implies, Equivalent
+from sympy import symbols, Or, And, Implies
 from sympy.logic.boolalg import truth_table
 
 # Definir símbolos
