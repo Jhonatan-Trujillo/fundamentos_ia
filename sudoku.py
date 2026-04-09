@@ -19,19 +19,19 @@ MODELO DEL PROBLEMA:
 from collections import deque
 import copy
 
-def imprimir_tablero(tablero, titulo="Tablero"):
-    """Imprime el tablero con separadores de bloque."""
-    print(f"\n{'─'*25}  {titulo}  {'─'*25}")
-    for i, fila in enumerate(tablero):
-        if i in (3, 6):
+def imprimir_tablero(tablero):
+    for f in range(9):
+        if f in (3, 6):
             print("─" * 21)
-        linea = ""
-        for j, val in enumerate(fila):
-            if j in (3, 6):
-                linea += "│ "
-            linea += (str(val) if val != 0 else "·") + " "
-        print(linea)
-    print()
+        fila = ""
+        for c in range(9):
+            if tablero[f][c] == 0:
+                fila += "· "
+            else:
+                fila += str(tablero[f][c]) + " "
+            if c in (2, 5):
+                fila += "│ "
+        print(fila)
 
 def obtener_vecinos(fila, columna):
     """Devuelve las posiciones de las celdas que comparten fila, 
@@ -168,19 +168,6 @@ def ac3(dominios):
 
     return True  # todos los dominios son consistentes
 
-def imprimir_tablero(tablero):
-    for f in range(9):
-        if f in (3, 6):
-            print("─" * 21)
-        fila = ""
-        for c in range(9):
-            if tablero[f][c] == 0:
-                fila += "· "
-            else:
-                fila += str(tablero[f][c]) + " "
-            if c in (2, 5):
-                fila += "│ "
-        print(fila)
 
 def aplicar_dominios(tablero, dominios):
     for (f, c), valores in dominios.items():
