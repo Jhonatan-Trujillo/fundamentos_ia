@@ -7,6 +7,14 @@ def escalon(net):
 
 np.random.seed(42)
 
+"""
+X = np.array([
+    [0.9, 0.95],
+    [0.3, 0.40],
+    ...
+])
+"""
+
 X = np.random.rand(60, 2)
 
 y = np.array([
