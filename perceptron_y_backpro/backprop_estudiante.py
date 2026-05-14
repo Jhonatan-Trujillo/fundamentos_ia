@@ -1,16 +1,5 @@
-# ============================================================
-#  BACKPROPAGATION — ¿El estudiante aprueba o no?
-#  Red: 2 entradas → 3 neuronas ocultas → 1 salida
-#  Mismas entradas que el perceptrón, pero ahora con una
-#  capa oculta que permite aprender patrones más complejos.
-# ============================================================
-
 import numpy as np
 import matplotlib.pyplot as plt
-
-# 1. FUNCIONES DE ACTIVACIÓN Y SUS DERIVADAS
-#    Usamos Sigmoide: suave, diferenciable, rango (0,1)
-#    Necesitamos la derivada para el backward pass
 
 def sigmoide(z):
     return 1 / (1 + np.exp(-z))
