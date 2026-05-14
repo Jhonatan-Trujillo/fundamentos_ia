@@ -144,6 +144,8 @@ def revisar(Xi, Xj, dominios):
             eliminado = True
     return eliminado
 
+
+
 def ac3(dominios):
     # Meter todos los arcos en la cola
     cola = deque()
